@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <style>
+        body {
+               background-color: #93B874;
+             }
+</style>
+        <title>login</title>
+    </h:head>
+    <h:body>
+        <center>
+        <h:form>
+            <img src="resources/images/techm.png" alt="Mountain View" style="width:200px;height:100px;"/>
+            <h3>Login here</h3>
+            <h:outputText value="Username" />&nbsp;&nbsp;
+            <h:inputText id="username" value="#{login.user}"></h:inputText>
+            <h:message for="username"></h:message>
+            <br /><br />
+
+            <h:outputText value="Password" />&nbsp;&nbsp;
+            <h:inputSecret id="password" value="#{login.pwd}"></h:inputSecret>
+            <h:message for="password"></h:message>
+            <br /><br />
+
+            <h:commandButton action="#{login.validateUsernamePassword}"
+                             value="Login"></h:commandButton>
+       
+        <br></br><br></br><br></br>
+        <h:outputLink value="register.xhtml">User Register Here!</h:outputLink>
+        </h:form>
+        
+       </center>
+    </h:body>
+</html>
